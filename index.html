@@ -404,7 +404,7 @@ html[data-theme="morning"] #vignette,html[data-theme="vintage"] #vignette{
   <div class="presets" id="presetRow" aria-label="Romantic presets"></div>
   <div class="fgrid">
     <div class="field"><label>To <span data-count="to"></span></label><input id="fTo" maxlength="24" placeholder="My Love"></div>
-    <div class="field"><label>From <span data-count="from"></span></label><input id="fFrom" maxlength="24" placeholder="Alessio"></div>
+    <div class="field"><label>From <span data-count="from"></span></label><input id="fFrom" maxlength="24" placeholder="YASH"></div>
     <div class="field full"><label>Occasion <span data-count="occasion"></span></label><input id="fOccasion" maxlength="40" placeholder="just because"></div>
     <div class="field full"><label>Message — use | for new line <span data-count="msg"></span></label><textarea id="fMsg" rows="3" maxlength="140" placeholder="I couldn't give you flowers|that last forever,|so I grew you a meadow|that never wilts."></textarea></div>
   </div>
@@ -459,7 +459,7 @@ function clean(v, fallback, max){
 }
 const PARAMS = {
   to: clean(qs.get("to"), "My Love", 24),
-  from: clean(qs.get("from"), "Alessio", 24),
+  from: clean(qs.get("from"), "YASH", 24),
   occasion: clean(qs.get("occasion"), "just because", 40).toLowerCase(),
   msg: clean(qs.get("msg"), "I couldn't give you flowers|that last forever,|so I grew you a meadow|that never wilts.", 140),
   style: CONFIG.themes.includes((qs.get("style")||"").toLowerCase()) ? qs.get("style").toLowerCase() : "midnight"
@@ -1541,7 +1541,7 @@ function renderStyles(){
 function buildLink(){
   const u = new URL(location.href.split("?")[0]);
   u.searchParams.set("to", $("fTo").value || "My Love");
-  u.searchParams.set("from", $("fFrom").value || "Alessio");
+  u.searchParams.set("from", $("fFrom").value || "YASH");
   u.searchParams.set("occasion", $("fOccasion").value || "just because");
   u.searchParams.set("msg", $("fMsg").value || "I grew a meadow for you");
   u.searchParams.set("style", draftStyle);
